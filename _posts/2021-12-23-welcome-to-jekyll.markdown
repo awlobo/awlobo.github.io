@@ -1,5 +1,6 @@
 ---
 layout: post
+is_post: true
 title:  "Welcome to Jekyll!"
 date:   2021-12-23 23:45:44 +0100
 categories: jekyll update
