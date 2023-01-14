@@ -30,9 +30,9 @@ url: "awlobo.github.io" # the base hostname & protocol for your site, e.g. http:
 github_username: awlobo
 
 # Build settings
+markdown:   kramdown
 style:  kjhealy
-markdown: kramdown
-theme: null
+# theme: null
 plugins:
   - jekyll-feed
 
