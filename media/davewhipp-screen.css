@@ -1,285 +1,138 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+* {
+    font-family: Avenir, Verdana, sans-serif;
+    font-style: normal;
+    color: rgb(243, 240, 240);
+    /* line-height: 1.5em; */
+    background-color: #1a222c;
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+html {
+    margin: 1% 2%;
     display: block;
 }
 
-body {
-    line-height: 1;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* end of reset */
-
-
-
-body {
-    font: normal normal 400;
-    font-size: 100%;
-    line-height: 1.5em;
-    /*also written as...  font: normal normal 400 100%/1.5em;*/
-    font-family: Avenir, Verdana, sans-serif;
-    margin-top: 1em;
-    margin-left: 1em;
-}
-
-p {
-    position: relative;
-    left: 25%;
-    margin-bottom: 0.7em;
-    margin-right: 0;
-    width: 55%;
-}
-
-code {
-    font: normal normal;
-    font-size: 90%;
-    /*line-height: 1em;*/
-    font-family: Monaco, Menlo, monospace, sans-serif;
-    color: #aaa;
-}
-
-p code {
-    position: absolute;
-    text-align: right;
-    right: -20%;
-}
-
-
-ul {
-    position: relative;
-    left: 25%;
-    width: 75%;
-    margin-bottom: 1.5em;
-    margin-top: -0.5em;
-}
-
-/*uncomment to get dashes in the list*/
-/*li:before {
-	content: "-";
-	position: relative;
-	left: -0.25em;
-}*/
-
-li {
-    /*second line indent*/
-    padding-left: 1.25em;
-    text-indent: -1.25em;
-    /*color: #777;*/
-}
-
-li ul {
-    position: relative;
-    left: 0;
-    width: 100%;
-    margin-top: 0.25em;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    font-weight: 400;
-    font-family: Avenir, Cousine, Verdana, sans-serif;
-    width: 80%;
+hr {
+    width: 40%;
+    margin-left: 0;
+    border-color: #7c7c7c;
 }
 
 h1 {
     text-align: left;
     font-size: 3em;
     line-height: 1em;
-    position: relative;
-    left: 25%;
+    font-weight: 100;
+    margin-bottom: 1%;
+    color: rgb(18, 110, 197);
 }
 
-h1+p {
-    /*subtitle*/
-    font-style: italic;
-    font-size: 110%;
+h1+i {
+    text-align: left;
+    font-size: 130%;
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.fa-github-alt:before {
+    content: "\f113"
+}
+
+.fa-linkedin-in:before {
+    content: "\f0e1"
 }
 
 h2 {
-    font-size: 1.1em;
-    color: #bc412b;
-    margin-top: 3em;
-    position: relative;
-    top: 1.4em;
+    font-size: 15pt;
+    font-weight: 100;
+    color: rgb(18, 110, 197);
+}
+
+
+/* -------------------------------------------- */
+
+table {
+    padding: 5px;
+    overflow: hidden;
+}
+
+table td.date {
     text-align: right;
-    width: 20%;
-}
-
-h3 {
-    font-size: 1em;
-    line-height: 2em;
-    position: relative;
-    top: 1.7em;
-    text-align: right;
-    width: 20%;
-}
-
-a {
-    color: inherit;
-    /*text-decoration:none*/
-}
-
-a:hover {
-    color: #39f
-}
-
-#webaddress {
-    margin-top: 1em;
-    position: relative;
-    left: 25%;
-    color: #bc412b;
-    font-family: Monaco, Menlo, monospace, sans-serif;
-    font-size: 100%;
-}
-
-#webaddress a {
-    text-decoration: none;
-}
-
-em {
-    /* font-weight: bold; */
-    font-style: italic;
-}
-
-strong {
+    padding-right: 20px;
     font-weight: bold;
+    font-variant: small-caps;
+    vertical-align: top;
+    width: 100px;
 }
 
-#address {
-    display: none;
+table td.info {
+    text-align: left;
 }
 
+table.experience {
+    border-collapse: separate;
+    border-spacing: 15px;
+}
 
+.experience td.date {
+    border-right: solid white;
+}
 
-/*
-@media only screen and (max-width: 480px) {
-	make one column somehow...
-}*/
+table.education {
+    border-spacing: 5px;
+}
+
+.education td.info {
+    padding: 0 20px;
+}
+
+table.skills {
+    border-spacing: 0px;
+}
+
+.skills td.date {
+    width: 200px;
+}
+
+table.langs {
+    border-spacing: 15px;
+}
+
+/* -------------------------------------------- */
+.steps {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+}
+
+.step {
+    width: 20px;
+    height: 20px;
+    /* background: #fff; */
+    border: 2px solid #ACACA6;
+    border-radius: 50%;
+}
+
+.step.completed {
+    background: rgb(18, 110, 197);
+    border: 2px solid rgb(18, 110, 197);
+}
+
+.progress {
+    position: absolute;
+    height: 50%;
+    border-bottom: 2px solid #ACACA6;
+    z-index: -1;
+}
+
+.percent {
+    position: absolute;
+    width: 100px;
+    height: 12px;
+    border-bottom: 2px solid rgb(18, 110, 197);
+    z-index: 1;
+}
+
+/* -------------------------------------------- */

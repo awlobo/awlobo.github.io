@@ -1,0 +1,24 @@
+- category: Languages
+  skills:
+    - name: English
+      rating: 3
+    - name: Spanish
+      rating: 4
+- category: Skills
+  skills:
+    - name: Programming Languages
+      items: [Java, Kotlin, Python, C++]
+    - name: Mobile Development
+      items: [Android, iOS]
+    - name: Cross-platform
+      items: [Flutter, Qt]
+    - name: Tools
+      items: [Firebase, Gradle, Postman, Git, Squish]
+    - name: Cross-platform
+      items: [Windows, Windows Server, Arch Linux, MacOS]
+    - name: Cross-platform
+      items: [SQlite, Oracle Database, Microsoft SQL Server, MySQL]
+    - name: Cross-platform
+      items: [HTML, CSS, Bootstrap]
+    - name: Cross-platform
+      items: [Adobe Photoshop, Adobe After Effects, Adobe Premiere]
