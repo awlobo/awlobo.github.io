@@ -9,6 +9,11 @@
 html {
     margin: 1% 2%;
     display: block;
+    background-color: #1a222c;
+}
+
+body {
+    background-color: #1a222c;
 }
 
 hr {
@@ -76,7 +81,8 @@ table.experience {
 }
 
 .experience td.date {
-    border-right: solid white;
+    border-right: solid #7c7c7c;
+    /* border-right: solid white; */
 }
 
 table.education {
@@ -134,5 +140,3 @@ table.langs {
     border-bottom: 2px solid rgb(18, 110, 197);
     z-index: 1;
 }
-
-/* -------------------------------------------- */

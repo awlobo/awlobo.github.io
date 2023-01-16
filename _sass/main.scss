@@ -3294,7 +3294,7 @@ template {
 [class*=" devicon-"],
 [class^=devicon-] {
     font-family: devicon;
-    speak: none;
+    // speak: none;
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
@@ -4898,7 +4898,7 @@ sup {
 
 .header-icons {
     display: flex;
-    justify-contencontet: center;
+    justify-content: center;
     text-align: center
 }
 
