@@ -1,11 +1,56 @@
-- category: Languages
-  skills:
+- personal:
+    - name: Andrea Lobo
+      position: Software Engineer
+      phone: +34 630 611 259
+      email: andrea.lobo.arroyo@gmail.com
+      github: https://github.com/awlobo
+      linkedin: https://www.linkedin.com/in/andrea-lobo/
+- experience:
+    - position: Software Engineer
+      company: Pix4D
+      location: Madrid
+      date: October 2020\nCurrent
+      description:
+        [
+          Drone photogrammetry software company,
+          uses images to create professional orthomosaics,
+          pointclouds,
+          models and more,
+          Developed a cross-platform application (iOS and Android) with Qt framework,
+        ]
+      tags: [Qt, Squish, Scrum, C++, Python, Concourse]
+    - position: Junior Android Developer
+      company: Cervezas La Cibeles
+      location: Leganés, Madrid
+      date: April 2020\nJune 2020
+      description: [Internship Contract, Develop a native Android application]
+      tags: [Android Studio, Firebase AA Kit]
+    - position: Junior QA
+      company: Imagar Solutions Company
+      location: Alcorcón, Madrid
+      date: October 2019
+      description: [Internship Contract, Functional and automation testing]
+      tags: [Python, Selenium, Postman, SonarQube, JMeter]
+- education:
+    - name: Associate Degree in Cross-platform Applications Development - CFP Juan XXIII
+      date: June 2020
+    - name: Professional Certificate in Computer Security IFCT0109 (SEPE)
+      date: October 2019
+    - name: Bachelor of Media and Communications at Universidad Rey Juan Carlos
+      date: June 2018
+- volunteering:
+    - name: Red Cross - School support at Usera I Children’s Day Center
+      date: 2017-2018
+    - name: Esplai - Teaching basic computer usage and office suite in prisons in Madrid
+      date: 2016
+- languages:
     - name: English
       rating: 3
+      level: Fluid
     - name: Spanish
       rating: 4
-- category: Skills
-  skills:
+      level: Native
+- skills:
     - name: Programming Languages
       items: [Java, Kotlin, Python, C++]
     - name: Mobile Development
@@ -14,11 +59,11 @@
       items: [Flutter, Qt]
     - name: Tools
       items: [Firebase, Gradle, Postman, Git, Squish]
-    - name: Cross-platform
+    - name: OS
       items: [Windows, Windows Server, Arch Linux, MacOS]
-    - name: Cross-platform
+    - name: Database
       items: [SQlite, Oracle Database, Microsoft SQL Server, MySQL]
-    - name: Cross-platform
+    - name: Web
       items: [HTML, CSS, Bootstrap]
-    - name: Cross-platform
+    - name: Multimedia
       items: [Adobe Photoshop, Adobe After Effects, Adobe Premiere]
