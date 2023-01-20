@@ -5,119 +5,90 @@
 
 <body>
     <div id="cv">
+
+        {% assign me = site.data.personal %}
+        {% assign cv = site.data.cv %}
+
         <div id="content">
             <a href='{{site.url}}/'>Back</a>
-            <h1 id="andrea-lobo">Andrea <strong>Lobo</strong></h1>
+            <h1 id="andrea-lobo">{{me.first_name}} <strong>{{me.second_name}}</strong>
+                <a target="_blank" href=""><i class="fa-solid fa-file-pdf"></i></a>
+            </h1>
 
-            <i>Software Engineer</i>
+            <i>{{me.user_title}}</i>
 
             <div class="links">
-                <a target="_blank" href={{site.github_page}}><i class="icon fa fa-github-alt"></i>github.com/awlobo</a>
-                <a target="_blank" href="https://www.linkedin.com/in/andrea-lobo/"><i
-                        class="icon fa fa-linkedin"></i>linkedin.com/in/andrea-lobo</a>
+                <a target="_blank" href={{me.github}}><i class="fa-brands fa-github"></i>{{ me.github | replace:
+                    "https://www.", "" }}</a>
+                <a target="_blank" href={{me.linkedin}}><i class="fa-brands fa-linkedin"></i>{{ me.linkedin | replace:
+                    "https://www.", "" }}</a>
             </div>
 
-            <div id="webaddress">
-                <i class="fa-email">630 611 259<i />
-                    <i><a href="mailito:andrea.lobo.arroyo@gmail.com">andrea.lobo.arroyo@gmail.com</a></i>
+            <div>
+                <i class="fa-solid fa-location-dot">{{ me.location }}</i>
+                <i class="fa-solid fa-location-dot"><span>{{ me.location }}</span></i>
+                <i class="fa-solid fa-phone"><span>{{ me.phone }}</span></i>
             </div>
 
-            <h2 style="margin-top: 40px;">PROFESSIONAL EXPERIENCE</h2>
+            <div id="personal">
+                <i class="fa-solid fa-envelope"><a target="_blank" href="mailito:{{ me.email }}">{{ me.email }}</a></i>
+                <i class="fa-solid fa-code"><a target="_blank" href={{ me.url }}>{{ me.url | replace: "https://www.", ""
+                        }}</a></i>
+            </div>
+
+            <div id="spacer" style="height: 40px;"/></div>
+
+            <h2>{{cv.experience.name}}</h2>
             <hr>
 
             <table class="experience" style="undefined;table-layout: fixed; width: 793px">
-                <tbody>
-                    <tr>
-                        <td class="date" rowspan="5">October 2020<br>Current</td>
-                    </tr>
-                    <tr>
-                        <td class="info"><b>Software Engineer, PIX4D, Madrid.</b></td>
-                    </tr>
-                    <tr>
-                        <td class="info">Drone photogrammetry software company, uses images to create professional
-                            orthomosaics, pointclouds, models and more</td>
-                    </tr>
-                    <tr>
-                        <td class="info">Developed a cross-platform application (iOS and Android) with Qt framework
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="info">Qt Squish Scrum C++ Python Concourse</td>
-                    </tr>
-
-                    <tr>
-                        <td class="date" rowspan="5">April 2020<br>June 2020</td>
-                    </tr>
-                    <tr>
-                        <td class="info">Junior Android Developer , Cervezas La Cibeles, Legan é s. Madrid</td>
-                    </tr>
-                    <tr>
-                        <td class="info">Internship Contract</td>
-                    </tr>
-                    <tr>
-                        <td class="info">Develop a native Android application</td>
-                    </tr>
-                    <tr>
-                        <td class="info">Android Studio Firebase AA Kit</td>
-                    </tr>
-
-                    <tr>
-                        <td class="date" rowspan="5">October 2019</td>
-                    </tr>
-                    <tr>
-                        <td class="info">Junior QA , Imagar Solutions Company, Alcorc ó n. Madrid</td>
-                    </tr>
-                    <tr>
-                        <td class="info">Internship Contract</td>
-                    </tr>
-                    <tr>
-                        <td class="info">Functional and automation testing</td>
-                    </tr>
-                    <tr>
-                        <td class="info">Python Selenium Postman SonarQube JMeter</td>
-                    </tr>
-                </tbody>
+                {% for exp in cv.experience.data %}
+                <tr>
+                    <td class="date" rowspan="5">{{exp.date}}</td>
+                </tr>
+                <tr>
+                    <td class="info"><b>{{exp.position}}, {{exp.company}}, {{exp.location}}.</b></td>
+                </tr>
+                {% for desc in exp.description %}
+                <tr>
+                    <td class="info">{{ desc }}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td class="info">{{ exp.tags| join:", "}}</td>
+                </tr>
+                {% endfor %}
             </table>
 
-            <h2>EDUCATION</h2>
+            <h2>{{cv.education.name}}</h2>
             <hr>
 
             <table class="education">
+                {% for edu in cv.education.data %}
                 <tr>
-                    <td class="date">June 2020</td>
-                    <td class="info">Associate Degree in Cross-platform Applications Development - CFP Juan XXIII</td>
+                    <td class="date">{{ edu.date }}</td>
+                    <td class="info">{{ edu.name }}</td>
                 </tr>
-                <tr>
-                    <td class="date">October 2019</td>
-                    <td class="info">Professional Certificate in Computer Security IFCT0109 (SEPE)</td>
-                </tr>
-                <tr>
-                    <td class="date">June 2018</td>
-                    <td class="info">Bachelor of Media and Communications at Universidad Rey Juan Carlos</td>
-                </tr>
+                {% endfor %}
             </table>
 
-            <h2>SKILLS</h2>
+            <h2>{{cv.skills.name}}</h2>
             <hr>
 
             <table class="skills">
-                {% for cv in site.data.cv_data %}
-                {% for skill in cv.skills %}
+                {% for skill in cv.skills.data %}
                 <tr>
                     <td class="date">{{ skill.name }}</td>
                     <td class="info">{{ skill.items | join:", " }}</td>
                 </tr>
                 {% endfor %}
-                {% endfor %}
             </table>
 
-
-            <h2>LANGUAGES</h2>
+            <h2>{{cv.languages.name}}</h2>
             <hr>
 
             <table class="langs">
-                {% for cv in site.data.cv_data %}
-                {% for lang in cv.languages %}
+                {% for lang in cv.languages.data %}
                 <tr>
                     <td>{{ lang.name }}</td>
                     <td>
@@ -139,21 +110,18 @@
                     <td>{{ lang.level }}</td>
                 </tr>
                 {% endfor %}
-                {% endfor %}
             </table>
 
-            <h2>VOLUNTEERING</h2>
+            <h2>{{cv.volunteering.name}}</h2>
             <hr>
 
             <table class="education">
+                {% for vol in cv.volunteering.data %}
                 <tr>
-                    <td class="date">2017-2018</td>
-                    <td class="info">Red Cross - School support at Usera I Children’s Day Center</td>
+                    <td class="date">{{ vol.date }}</td>
+                    <td class="info">{{ vol.name }}</td>
                 </tr>
-                <tr>
-                    <td class="date">2016</td>
-                    <td class="info">Esplai - Teaching basic computer usage and office suite in prisons in Madrid</td>
-                </tr>
+                {% endfor %}
             </table>
 
         </div>

@@ -1,19 +1,22 @@
 <div id="particles-js">
     <div class="header">
+
+        {% assign p = site.data.personal %}
+
         <h1>
-            <span class="site-title">{{site.username}}</span>
-            <span class="site-description">{{site.user_title}}</span>
+            <span class="site-title">{{p.full_name}}</span>
+            <span class="site-description">{{p.user_title}}</span>
         </h1>
         <div class="header-icons">
-            <a aria-label="Send email" target="_blank" href="mailto:{{site.email}}"><i class="icon fa fa-envelope"></i></a>
-            <a aria-label="My Github" target="_blank" href={{site.github_page}}><i class="icon fa fa-github-alt"
-                aria-hidden="true"></i></a>
-            <a aria-label="My linkedIn" target="_blank" href="https://www.linkedin.com/in/andrea-lobo/"><i class="icon fa fa-brands fa-linkedin-in"></i></a>
-            <!-- <a aria-label="Resume" href="#"><i class="icon fa fa-file-text"></i></a> -->
+            <a aria-label="Send email" target="_blank" href="mailto:{{p.email}}"><i class="icon fa fa-envelope"></i></a>
+            <a aria-label="My Github" target="_blank" href={{p.github}}><i class="fa-brands fa-github"
+                    aria-hidden="true"></i></a>
+            <a aria-label="My linkedIn" target="_blank" href={{p.linkedin}}><i
+                    class="icon fa fa-brands fa-linkedin-in"></i></a>
         </div>
         <div class="header-links">
             {% for nav in site.data.nav %}
-                <a class="link" href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+            <a class="link" href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
             {% endfor %}
         </div>
     </div>
