@@ -1,3 +1,4 @@
+last_update: 2022-01-28
 experience:
   name: PROFESSIONAL EXPERIENCE
   data:
@@ -38,7 +39,7 @@ education:
 volunteering:
   name: VOLUNTEERING
   data:
-    - name: Red Cross - School support at Usera I Children’s Day Center
+    - name: Red Cross - School support at Usera I Children's Day Center
       date: 2017-2018
     - name: Esplai - Teaching basic computer usage and office suite in prisons in Madrid
       date: 2016
@@ -70,3 +71,26 @@ skills:
       items: [HTML, CSS, Bootstrap]
     - name: Multimedia
       items: [Adobe Photoshop, Adobe After Effects, Adobe Premiere]
+projects:
+  name: PROJECTS
+  data:
+    - name: TV-TRACKER
+      date: 2020
+      link: https://the-crimson-pizza.github.io/Tv-Tracker-Kotlin/
+      github: https://github.com/The-Crimson-Pizza/Tv-Tracker-Kotlin
+      description: Personal Project. Tv-Tracker is a free app for television fans. It allows you to keep track of the watched episodes and synchronize that information in real time in the cloud.
+      tags: [Android Studio, Kotlin, Retrofit3, Coroutines, Firebase Realtime Database, AnyChart]
+references:
+  name: REFERENCES
+  icon: fa-solid fa-quote-left
+  data:
+    - referee: Jon Snow
+      position: Lord Commander
+      company: Night's Watch
+      email: john.snow@nightwatch.org
+      phone: +687 987 654
+    - referee: Jon Snow
+      position: Lord Commander
+      company: Night's Watch
+      email: john.snow@nightwatch.org
+      phone: +687 987 654
