@@ -6,8 +6,7 @@ experience:
       company: Pix4D
       location: Madrid
       date: October 2020<br>Current
-      description:
-        [
+      description: [
           "Drone photogrammetry software company,
           uses images to create professional orthomosaics,
           pointclouds,
@@ -46,31 +45,27 @@ volunteering:
 languages:
   name: LANGUAGES
   data:
-    - name: English
-      rating: 3
-      level: Fluid
     - name: Spanish
-      rating: 4
       level: Native
+    - name: English
+      level: Professional competence
 skills:
   name: SKILLS
   data:
     - name: Programming Languages
-      items: [Java, Kotlin, Python, C++]
+      items: [JavaScript, Python, Kotlin, C++, Dart]
     - name: Mobile Development
       items: [Android, iOS]
     - name: Cross-platform
       items: [Flutter, Qt]
+    - name: Web
+      items: [React]
+    - name: Database
+      items: [SQLite, MySQL, Oracle Database]
     - name: Tools
       items: [Firebase, Gradle, Postman, Git, Squish]
     - name: OS
       items: [Windows, Windows Server, Arch Linux, MacOS]
-    - name: Database
-      items: [SQlite, Oracle Database, Microsoft SQL Server, MySQL]
-    - name: Web
-      items: [HTML, CSS, Bootstrap]
-    - name: Multimedia
-      items: [Adobe Photoshop, Adobe After Effects, Adobe Premiere]
 projects:
   name: PROJECTS
   data:
@@ -79,7 +74,15 @@ projects:
       link: https://the-crimson-pizza.github.io/Tv-Tracker-Kotlin/
       github: https://github.com/The-Crimson-Pizza/Tv-Tracker-Kotlin
       description: Personal Project. Tv-Tracker is a free app for television fans. It allows you to keep track of the watched episodes and synchronize that information in real time in the cloud.
-      tags: [Android Studio, Kotlin, Retrofit3, Coroutines, Firebase Realtime Database, AnyChart]
+      tags:
+        [
+          Android Studio,
+          Kotlin,
+          Retrofit3,
+          Coroutines,
+          Firebase Realtime Database,
+          AnyChart,
+        ]
 references:
   name: REFERENCES
   icon: fa-solid fa-quote-left

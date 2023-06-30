@@ -11,14 +11,14 @@
 
         <div id="content">
             <div>
-                <a href='{{site.url}}/'>Back</a>
-                <label class="switch">
+                <a class="noprint" href='{{site.url}}/'>Back</a>
+                <label class="switch noprint">
                     <input type="checkbox" id="checkbox">
                     <span class="slider"></span>
                 </label>
             </div>
             <h1 id="andrea-lobo">{{me.first_name}} <strong>{{me.second_name}}</strong>
-                <a target="_blank" href=""><i class="fa-solid fa-file-pdf"></i></a>
+                <a target="_blank" href=""><i class="fa-solid fa-file-pdf noprint"></i></a>
             </h1>
 
             <h2 id="title">{{me.user_title}}</h2>
@@ -98,23 +98,7 @@
         <table class="langs">
             {% for lang in cv.languages.data %}
             <tr>
-                <td>{{ lang.name }}</td>
-                <td>
-                    <div class="progress-con">
-                        <div class="progress">
-                            <div class="percent"></div>
-                        </div>
-                        <div class="steps">
-                            {% for i in (1..4) %}
-                            {% if lang.rating >= i %}
-                            <div class="step completed" id="0"></div>
-                            {% else %}
-                            <div class="step" id="0"></div>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                </td>
+                <td><strong>{{ lang.name }}</strong></td>
                 <td>{{ lang.level }}</td>
             </tr>
             {% endfor %}
@@ -148,7 +132,7 @@
             {% endfor %}
         </code>
 
-        <!-- <h2><i class="{{ cv.references.icon }} fa-fw"></i>{{ cv.references.name }}</h2>
+        <h2><i class="{{ cv.references.icon }} fa-fw"></i>{{ cv.references.name }}</h2>
         <hr>
 
         <div class="references">
@@ -160,7 +144,7 @@
                 <div>{{ ref.phone }}</div>
             </div>
             {% endfor %}
-        </div> -->
+        </div>
 
     </div>
 
