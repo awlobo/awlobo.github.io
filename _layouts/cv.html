@@ -12,18 +12,10 @@
         <div id="content">
             <div>
                 <a href='{{site.url}}/'>Back</a>
-                <div class="switch">
-                    <input id="checkbox" type="checkbox" class="checkbox">
-                    <label for="checkbox" class="label">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
-                        <div class="ball"></div>
-                    </label>
-                </div>
-                <!-- <label class="switch">
-                    <input type="checkbox" id="toggle"" />
-                    <span class=" slider round"></span>
-                </label> -->
+                <label class="switch">
+                    <input type="checkbox" id="checkbox">
+                    <span class="slider"></span>
+                </label>
             </div>
             <h1 id="andrea-lobo">{{me.first_name}} <strong>{{me.second_name}}</strong>
                 <a target="_blank" href=""><i class="fa-solid fa-file-pdf"></i></a>
@@ -178,7 +170,7 @@
     const root_theme = document.querySelector(':root');
 
     document.querySelector('#checkbox').addEventListener('change', toggle => {
-        let theme = toggle.target.checked ? 'light' : 'dark';
+        const theme = toggle.target.checked ? 'light' : 'dark';
         root_theme.style.setProperty('--background', `var(--${theme}-background)`);
         root_theme.style.setProperty('--font', `var(--${theme}-font)`);
     });
