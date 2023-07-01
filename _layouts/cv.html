@@ -49,7 +49,7 @@
         <h2><i class="fa-solid fa-suitcase fa-fw"></i>{{cv.experience.name}}</h2>
         <hr>
 
-        <table class="experience" style="undefined;table-layout: fixed; width: 793px">
+        <table class="experience">
             {% for exp in cv.experience.data %}
             <tr>
                 <td class="date" rowspan="5">{{exp.date}}</td>
@@ -59,7 +59,7 @@
             </tr>
             {% for desc in exp.description %}
             <tr>
-                <td class="info">{{ desc }}</td>
+                <td class="info">> {{ desc }}</td>
             </tr>
             {% endfor %}
             <tr>

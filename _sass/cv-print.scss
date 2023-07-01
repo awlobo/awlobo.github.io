@@ -1,36 +1,7 @@
-:root {
-  --dark-primary: rgb(18, 110, 197);
-  --light-primary: rgb(18, 110, 197);
-  --dark-background: #1f242b;
-  --light-background: #efefef;
-  --dark-font: rgb(243, 240, 240);
-  --light-font: var(--dark-background);
-
-  --primary: var(--dark-primary);
-  --background: var(--dark-background);
-  --font: var(--dark-font);
-}
-
 * {
   font-family: Avenir, Verdana, sans-serif;
   font-style: normal;
-  color: var(--font);
-  background-color: var(--background);
-}
-
-html {
-  margin: 1% 2%;
-  display: block;
-  background-color: var(--background);
-}
-
-body {
-  background-color: var(--background);
-  transition: background 0.2s linear;
-}
-
-span {
-  font-weight: 100;
+  color: #1f242b;
 }
 
 i {
@@ -52,7 +23,7 @@ a:hover {
 }
 
 hr {
-  width: 40%;
+  width: 100%;
   margin-left: 0;
   border-color: #7c7c7c;
 }
@@ -63,7 +34,7 @@ h1 {
   line-height: 1em;
   font-weight: 100;
   margin-bottom: 1%;
-  color: var(--primary);
+  color: rgb(18, 110, 197);
 }
 
 h1 > a {
@@ -75,6 +46,16 @@ h1 + i {
   font-size: 130%;
 }
 
+h1#andrea-lobo {
+  font-size: 35px;
+  margin-bottom: -22px;
+}
+
+h1#andrea-lobo > strong {
+  font-weight: bold;
+  color: rgb(18, 110, 197);
+}
+
 .links {
   margin-top: 10px;
 }
@@ -82,20 +63,17 @@ h1 + i {
 h2 {
   font-size: 15pt;
   font-weight: 100;
-  color: var(--primary);
+  color: rgb(18, 110, 197);
 }
 
 h2#title {
-  color: var(--font);
+  color: var(#1f242b);
+  font-weight: 600;
+  margin-bottom: -12px;
 }
 
 h2 > i {
-  color: var(--primary);
-}
-
-table {
-  padding: 5px;
-  overflow: hidden;
+  color: rgb(18, 110, 197);
 }
 
 table td.date {
@@ -109,71 +87,55 @@ table td.date {
 
 table td.info {
   text-align: left;
+  //   width: 80%;
 }
 
 table.experience {
-  border-collapse: separate;
-  border-spacing: 15px;
+  //   border-collapse: separate;
+  //   border-spacing: 15px;
 }
 
 .experience td.date {
-  border-right: solid #7c7c7c;
+  //   border-right: solid #7c7c7c;
   /* border-right: solid white; */
 }
 
+.experience td.info {
+  //   padding: -20px;
+  width: 100%;
+  color: red;
+  //   color: #1f242b;
+}
+
 table.education {
-  border-spacing: 5px;
+  border-spacing: 15px 0px;
 }
 
 .education td.info {
-  padding: 0 20px;
+  //   padding: 0 20px;
+  width: 600px;
+}
+
+.education td.date {
+  text-align: left;
 }
 
 table.skills {
-  border-spacing: 0px;
+  border-spacing: 15px 0px;
 }
 
 .skills td.date {
-  width: 200px;
+  text-align: left;
+  width: 175px;
+}
+
+.skills td.info {
+  width: 500px;
 }
 
 table.langs {
-  border-spacing: 15px;
-}
-
-.steps {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 120px;
-}
-
-.step {
-  width: 20px;
-  height: 20px;
-  /* background: #fff; */
-  border: 2px solid #acaca6;
-  border-radius: 50%;
-}
-
-.step.completed {
-  background: var(--primary);
-  border: 2px solid var(--primary);
-}
-
-.progress {
-  position: absolute;
-  height: 50%;
-  border-bottom: 2px solid #acaca6;
-  z-index: -1;
-}
-
-.percent {
-  position: absolute;
-  width: 100px;
-  height: 12px;
-  border-bottom: 2px solid var(--primary);
-  z-index: 1;
+  width: 50%;
+  border-spacing: 15px 0px;
 }
 
 .references {
@@ -195,11 +157,11 @@ table.langs {
 }
 
 .projects a {
-  color: var(--primary);
+  color: rgb(18, 110, 197);
 }
 
 .projects a > i {
-  color: var(--primary);
+  color: rgb(18, 110, 197);
 }
 
 /* Special print */
@@ -207,14 +169,4 @@ table.langs {
 .noprint {
   display: none !important;
   opacity: 0;
-}
-
-@page {
-  size: auto;
-  margin: 5mm;
-}
-
-h1#andrea-lobo {
-    font-size: 35px;
-    margin-bottom: -22px;
 }
