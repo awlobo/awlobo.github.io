@@ -91,12 +91,14 @@ table td.info {
 }
 
 table.experience {
+  border-spacing: 15px 0px;
   //   border-collapse: separate;
   //   border-spacing: 15px;
 }
 
 .experience td.date {
-  //   border-right: solid #7c7c7c;
+  border-right: 1px solid #7c7c7c;
+  text-align: left;
   /* border-right: solid white; */
 }
 
@@ -118,6 +120,7 @@ table.education {
 
 .education td.date {
   text-align: left;
+  font-variant: small-caps;
 }
 
 table.skills {
@@ -138,6 +141,10 @@ table.langs {
   border-spacing: 15px 0px;
 }
 
+.langs strong {
+  font-variant: small-caps;
+}
+
 .references {
   display: flex;
   flex-direction: row;
@@ -152,8 +159,13 @@ table.langs {
   flex: 1;
 }
 
+div.projects {
+  padding-left: 15px;
+}
+
 .projects span {
   font-weight: bold;
+  font-variant: small-caps;
 }
 
 .projects a {
@@ -170,3 +182,9 @@ table.langs {
   display: none !important;
   opacity: 0;
 }
+
+// .fa-github::before {
+//   content: url("../assets/img/github.svg");
+//   width: 10px;
+//   height: 10px;
+// }

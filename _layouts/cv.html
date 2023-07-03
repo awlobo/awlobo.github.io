@@ -26,12 +26,12 @@
             <div id="spacer" style="height: 25px;"></div>
 
             <a target="_blank" href={{ me.url }}><i class="fa-fw fa-solid fa-code"></i>{{ me.url | replace:
-                "https://www.", "" }}</a>
+                "https://", "" }}</a>
             <a target="_blank" href={{ me.github }}><i class="fa-fw fa-brands fa-github"></i>{{ me.github | replace:
-                "https://www.", "" }}</a>
+                "https://", "" }}</a>
             <a target="_blank" href={{ me.linkedin }}><i class="fa-fw fa-brands fa-linkedin"></i>{{ me.linkedin |
                 replace:
-                "https://www.", "" }}</a>
+                "https://", "" }}</a>
 
             <br>
 
@@ -132,7 +132,7 @@
             {% endfor %}
         </code>
 
-        <h2><i class="{{ cv.references.icon }} fa-fw"></i>{{ cv.references.name }}</h2>
+        <!-- <h2><i class="{{ cv.references.icon }} fa-fw"></i>{{ cv.references.name }}</h2>
         <hr>
 
         <div class="references">
@@ -144,7 +144,7 @@
                 <div>{{ ref.phone }}</div>
             </div>
             {% endfor %}
-        </div>
+        </div> -->
 
     </div>
 
