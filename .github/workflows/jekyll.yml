@@ -19,12 +19,14 @@ jobs:
       - run: |
           pwd
           ls
-          echo "Installing weasyprint"
+          echo "---> Installing weasyprint"
           sudo apt install weasyprint
-          echo "Exporting pdf"
+          echo "---> Exporting pdf"
           weasyprint -e "utf-8" -s _site/assets/styles/cv.css https://awlobo.github.io/about/ _site/assets/cv.pdf
-          cp _site/assets/cv.pdf assets/cv.pdf
-      - run: |
+          echo "---> Copying pdf"
+          sudo cp _site/assets/cv.pdf assets/cv.pdf
+      - name: Pushing pdf to remote
+        run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add assets/cv.pdf
