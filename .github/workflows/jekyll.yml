@@ -13,14 +13,20 @@ jobs:
       - name: Build the site in the jekyll/builder container
         uses: actions/checkout@v3
       - run: |
-          docker run \
-          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-      - run: |
           pwd
           ls
           echo "Installing weasyprint"
           sudo apt install weasyprint
           echo "Exporting pdf"
           weasyprint -e "utf-8" -s assets/styles/cv.css https://awlobo.github.io/about/ assets/cv.pdf
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add assets/cv.pdf
+          git commit -m "PDF auto generated"
+          git push
+      - run: |
+          docker run \
+          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
       - run: echo "Done!"
