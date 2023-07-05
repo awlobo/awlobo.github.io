@@ -9,7 +9,7 @@
         {% assign me = site.data.personal %}
         {% assign cv = site.data.cv %}
 
-        <div id="content">
+        <div id="title">
             <div>
                 <a class="noprint" href='{{site.url}}/'>Back</a>
                 <label class="switch noprint">
@@ -18,119 +18,150 @@
                 </label>
             </div>
             <h1 id="andrea-lobo">{{me.first_name}} <strong>{{me.second_name}}</strong>
-                <a target="_blank" href=""><i class="fa-solid fa-file-pdf noprint"></i></a>
+                <a target="_blank" href="../assets/cv.pdf"><i class="fa-solid fa-file-pdf noprint"></i></a>
             </h1>
 
             <h2 id="title">{{me.user_title}}</h2>
-
-            <div id="spacer" style="height: 25px;"></div>
-
-            <a target="_blank" href={{ me.url }}><i class="fa-fw fa-solid fa-code"></i>{{ me.url | replace:
-                "https://", "" }}</a>
-            <a target="_blank" href={{ me.github }}><i class="fa-fw fa-brands fa-github"></i>{{ me.github | replace:
-                "https://", "" }}</a>
-            <a target="_blank" href={{ me.linkedin }}><i class="fa-fw fa-brands fa-linkedin"></i>{{ me.linkedin |
-                replace:
-                "https://", "" }}</a>
-
-            <br>
-
-            <div>
-                <i class="fa-solid fa-phone fa-fw" target="_blank"></i>{{ me.phone }}
-                <a target="_blank" href="mailito:{{ me.email }}"><i class="fa-fw fa-solid fa-envelope"></i>{{ me.email
-                    }}</a>
-            </div>
-
-            <div><i class="fa-solid fa-location-dot fa-fw" target="_blank"></i>{{ me.location }}</div>
-
-            <div id="spacer" style="height: 30px;"></div>
         </div>
 
-        <h2><i class="fa-solid fa-suitcase fa-fw"></i>{{cv.experience.name}}</h2>
-        <hr>
+        <div id="spacer" style="height: 25px;"></div>
 
-        <table class="experience">
-            {% for exp in cv.experience.data %}
-            <tr>
-                <td class="date" rowspan="5">{{exp.date}}</td>
-            </tr>
-            <tr>
-                <td class="info"><b>{{exp.position}}, {{exp.company}}, {{exp.location}}.</b></td>
-            </tr>
-            {% for desc in exp.description %}
-            <tr>
-                <td class="info">> {{ desc }}</td>
-            </tr>
-            {% endfor %}
-            <tr>
-                <td class="info">{{ exp.tags | join:", "}}</td>
-            </tr>
-            {% endfor %}
-        </table>
+        <div class="links">
+            <div>
+                <a target="_blank" href={{ me.url }}><i class="fa-fw fa-solid fa-code"></i>{{ me.url | replace:
+                    "https://", "" }}</a>
+                <a target="_blank" href={{ me.github }}><i class="fa-fw fa-brands fa-github"></i>{{ me.github | replace:
+                    "https://", "" }}</a>
+                <a target="_blank" href={{ me.linkedin }}><i class="fa-fw fa-brands fa-linkedin"></i>{{ me.linkedin |
+                    replace:"https://", "" }}</a>
+            </div>
 
-        <h2><i class="fa-solid fa-graduation-cap fa-fw"></i>{{cv.education.name}}</h2>
-        <hr>
+            <div>
+                <span><i class="fa-solid fa-phone fa-fw"></i>{{ me.phone }}</span>
+                <a target="_blank" href="mailito:{{ me.email }}">
+                    <i class="fa-fw fa-solid fa-envelope"></i>{{ me.email }}
+                </a>
+                <span><i class="fa-solid fa-location-dot fa-fw"></i>{{ me.location }}</span>
+            </div>
+            <br>
 
-        <table class="education">
-            {% for edu in cv.education.data %}
-            <tr>
-                <td class="date">{{ edu.date }}</td>
-                <td class="info">{{ edu.name }}</td>
-            </tr>
-            {% endfor %}
-        </table>
+        </div>
 
-        <h2><i class="fa-regular fa-bars-progress fa-fw"></i>{{cv.skills.name}}</h2>
-        <hr>
+        <div class="experience">
+            <h2><i class="fa-solid fa-suitcase fa-fw"></i>{{cv.experience.name}}</h2>
+            <hr>
 
-        <table class="skills">
-            {% for skill in cv.skills.data %}
-            <tr>
-                <td class="date">{{ skill.name }}</td>
-                <td class="info">{{ skill.items | join:", " }}</td>
-            </tr>
-            {% endfor %}
-        </table>
+            <table class="experience">
+                {% for exp in cv.experience.data %}
+                {% if exp.visible %}
+                <tr>
+                    <td class="date" rowspan="5">{{exp.date}}</td>
+                </tr>
+                <tr>
+                    <td class="info"><b>{{exp.position}}, {{exp.company}}, {{exp.location}}.</b></td>
+                </tr>
+                {% for desc in exp.description %}
+                <tr>
+                    <td class="info">> {{ desc }}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td class="info">
+                        {% for tag in exp.tags %}
+                        <span class="pills">{{ tag }}</span>
+                        {% endfor %}
+                    </td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </table>
+        </div>
 
-        <h2><i class="fa-solid fa-earth-europe fa-fw"></i>{{ cv.languages.name }}</h2>
-        <hr>
+        <div class="twocolumns">
+            <div class="skills column">
 
-        <table class="langs">
-            {% for lang in cv.languages.data %}
-            <tr>
-                <td><strong>{{ lang.name }}</strong></td>
-                <td>{{ lang.level }}</td>
-            </tr>
-            {% endfor %}
-        </table>
+                <h2><i class="fa-regular fa-bars-progress fa-fw"></i>{{cv.skills.name}}</h2>
+                <hr>
 
-        <h2><i class="fa-solid fa-handshake-angle fa-fw"></i>{{cv.volunteering.name}}</h2>
-        <hr>
+                <table class="skills">
+                    {% for skill in cv.skills.data %}
+                    <tr>
+                        <td class="date">{{ skill.name }}</td>
+                        <td class="info">{{ skill.items | join:", " }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
 
-        <table class="education">
-            {% for vol in cv.volunteering.data %}
-            <tr>
-                <td class="date">{{ vol.date }}</td>
-                <td class="info">{{ vol.name }}</td>
-            </tr>
-            {% endfor %}
-        </table>
+            <div class="langs column">
 
-        <h2><i class="fa-solid fa-diagram-project fa-fw"></i>{{cv.projects.name}}</h2>
-        <hr>
+                <h2><i class="fa-solid fa-earth-europe fa-fw"></i>{{ cv.languages.name }}</h2>
+                <hr>
 
-        <code class="projects">
+                <table class="langs">
+                    {% for lang in cv.languages.data %}
+                    <tr>
+                        <td class="date">{{ lang.name }}</td>
+                        <td class="info">{{ lang.level }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+        </div>
+
+        <div class="education">
+
+            <h2><i class="fa-solid fa-graduation-cap fa-fw"></i>{{cv.education.name}}</h2>
+            <hr>
+            <table class="education">
+                {% for edu in cv.education.data %}
+                <tr>
+                    <td class="date">{{ edu.date }}</td>
+                    <td class="info">{{ edu.name }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <!-- class="newpage" -->
+        <div class="volunteering">
+
+            <h2><i class="fa-solid fa-handshake-angle fa-fw"></i>{{cv.volunteering.name}}</h2>
+            <hr>
+            <table class="education">
+                {% for vol in cv.volunteering.data %}
+                <tr>
+                    <td class="date">{{ vol.date }}</td>
+                    <td class="info">{{ vol.name }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+
+        <div class="projects">
+
+            <h2><i class="fa-solid fa-diagram-project fa-fw"></i>{{cv.projects.name}}</h2>
+            <hr>
+            <code class="projects">
             {% for pro in cv.projects.data %}
             <div>
-                <span>{{ pro.name }} ({{ pro.date }})</span>
+                <span class="name">{{ pro.name }} ({{ pro.date }})</span>
                 <a target="_blank" href={{ pro.github }}><i class="fa-brands fa-github fa-fw"></i>{{ pro.github | replace:
                 "https://", "" }}</a>
                 <a target="_blank" href={{ pro.link }}><i class="fa-solid fa-arrow-up-right-from-square fa-fw"></i></i>Website</a>
             </div>
             <div>{{ pro.description }}</div>
-            <div>{{ pro.tags | join:", " }}</div>
+            <div>
+                {% for tag in pro.tags %}
+                <span class="pills">{{ tag }}</span>
+                {% endfor %}
+            </div>
             {% endfor %}
-        </code>
+            </code>
+
+        </div>
 
         <!-- <h2><i class="{{ cv.references.icon }} fa-fw"></i>{{ cv.references.name }}</h2>
         <hr>
@@ -155,6 +186,7 @@
 
     document.querySelector('#checkbox').addEventListener('change', toggle => {
         const theme = toggle.target.checked ? 'light' : 'dark';
+        root_theme.style.setProperty('--primary', `var(--${theme}-primary)`);
         root_theme.style.setProperty('--background', `var(--${theme}-background)`);
         root_theme.style.setProperty('--font', `var(--${theme}-font)`);
     });

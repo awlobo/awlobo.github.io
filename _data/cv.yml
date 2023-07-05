@@ -3,44 +3,50 @@ experience:
   name: PROFESSIONAL EXPERIENCE
   data:
     - position: Software Engineer
+      url: https://www.pix4d.com/product/pix4dcapture/
       company: Pix4D
       location: Madrid
-      date: October 2020<br>Current
+      date: Oct 2020<br>Current
       description: [
           "Drone photogrammetry software company,
           uses images to create professional orthomosaics,
-          pointclouds,
-          models and more",
-          "Developed a cross-platform application (iOS and Android) with Qt framework",
+          pointclouds, models and more",
+          "Development of a mobile application (iOS and Android) for data acquisition with drones and mission planning for 3D mapping",
         ]
-      tags: [Qt, Squish, Scrum, C++, Python, Concourse]
+      tags: [Qt, C++, Squish, Agile, Python, CI/CD, Git]
+      visible: true
     - position: Junior Android Developer
       company: Cervezas La Cibeles
       location: Leganés, Madrid
-      date: April 2020<br>June 2020
-      description: [Internship Contract, Develop a native Android application]
-      tags: [Android Studio, Firebase AA Kit]
+      date: Apr 2020<br>Jun 2020
+      description:
+        [
+          Internship Contract. Development of a native Android application that reads barcodes,
+        ]
+      tags: [Android, Kotlin, Firebase AA Kit, Git, GitHub Actions]
+      visible: true
     - position: Junior QA
       company: Imagar Solutions Company
       location: Alcorcón, Madrid
-      date: October 2019
+      date: Oct 2019
       description: [Internship Contract, Functional and automation testing]
       tags: [Python, Selenium, Postman, SonarQube, JMeter]
+      visible: false
 education:
   name: EDUCATION
   data:
     - name: Associate Degree in Cross-platform Applications Development - CFP Juan XXIII
-      date: June 2020
+      date: 2020
     - name: Professional Certificate in Computer Security IFCT0109 (SEPE)
-      date: October 2019
+      date: 2019
     - name: Bachelor of Media and Communications at Universidad Rey Juan Carlos
-      date: June 2018
+      date: 2018
 volunteering:
   name: VOLUNTEERING
   data:
     - name: Red Cross - School support at Usera I Children's Day Center
-      date: 2017-2018
-    - name: Esplai - Teaching basic computer usage and office suite in prisons in Madrid
+      date: 2017
+    - name: Esplai - Teaching basic computer literacy skills in penitentiary centers in Madrid
       date: 2016
 languages:
   name: LANGUAGES
@@ -52,20 +58,16 @@ languages:
 skills:
   name: SKILLS
   data:
-    - name: Programming Languages
-      items: [JavaScript, Python, Kotlin, C++, Dart]
-    - name: Mobile Development
-      items: [Android, iOS]
-    - name: Cross-platform
-      items: [Flutter, Qt]
+    - name: Languages
+      items: [JavaScript, Python, C++]
+    - name: Frameworks
+      items: [Android, iOS, Flutter, Qt]
     - name: Web
-      items: [React]
-    - name: Database
-      items: [SQLite, MySQL, Oracle Database]
+      items: [React, HTML, CSS, Node.js]
+    - name: Databases
+      items: [SQLite, MySQL, Oracle]
     - name: Tools
-      items: [Firebase, Gradle, Postman, Git, Squish]
-    - name: OS
-      items: [Windows, Windows Server, Arch Linux, MacOS]
+      items: [Firebase, Postman, Git]
 projects:
   name: PROJECTS
   data:
@@ -73,10 +75,10 @@ projects:
       date: 2020
       link: https://the-crimson-pizza.github.io/Tv-Tracker-Kotlin/
       github: https://github.com/The-Crimson-Pizza/Tv-Tracker-Kotlin
-      description: Personal Project. Tv-Tracker is a free app for television fans. It allows you to keep track of the watched episodes and synchronize that information in real time in the cloud.
+      description: Is a free app for television fans. It allows you to keep track of the watched episodes and synchronize that information in real time in the cloud.
       tags:
         [
-          Android Studio,
+          Android,
           Kotlin,
           Retrofit3,
           Coroutines,

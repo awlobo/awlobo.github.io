@@ -1,11 +1,11 @@
 /* ---------------  CV  ----------------- */
 
 :root {
-  --dark-primary: rgb(18, 110, 197);
-  --light-primary: rgb(18, 110, 197);
+  --dark-primary: rgb(87, 174, 255);
+  --light-primary: rgb(35, 136, 230);
   --dark-background: #1f242b;
-  --light-background: #efefef;
-  --dark-font: rgb(243, 240, 240);
+  --light-background: rgb(243, 240, 240);
+  --dark-font: var(--light-background);
   --light-font: var(--dark-background);
 
   --primary: var(--dark-primary);
@@ -18,6 +18,7 @@
   font-style: normal;
   color: var(--font);
   background-color: var(--background);
+  font-size: 100%;
 }
 
 html {
@@ -29,6 +30,13 @@ html {
 body {
   background-color: var(--background);
   transition: background 0.2s linear;
+  margin-bottom: 50px;
+}
+
+div.links > div {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50%;
 }
 
 span {
@@ -36,7 +44,7 @@ span {
 }
 
 i {
-  padding: 5px 5px 5px 0px;
+  padding: 5px 10px 5px 3px;
 }
 
 i > span {
@@ -49,7 +57,7 @@ a {
 }
 
 a:hover {
-  font-weight: 120;
+  font-weight: bold;
   text-decoration: underline;
 }
 
@@ -61,10 +69,9 @@ hr {
 
 h1 {
   text-align: left;
-  font-size: 3em;
-  line-height: 1em;
+  font-size: 30pt;
   font-weight: 100;
-  margin-bottom: 1%;
+  margin-bottom: -20px;
   color: var(--primary);
 }
 
@@ -72,23 +79,19 @@ h1 > a {
   font-size: 40%;
 }
 
-h1 + i {
-  text-align: left;
-  font-size: 130%;
-}
-
 .links {
   margin-top: 10px;
 }
 
 h2 {
-  font-size: 15pt;
   font-weight: 100;
   color: var(--primary);
 }
 
 h2#title {
-  color: var(--font);
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: -12px;
 }
 
 h2 > i {
@@ -96,86 +99,32 @@ h2 > i {
 }
 
 table {
-  padding: 5px;
-  overflow: hidden;
+  border-spacing: 15px 0px;
 }
 
-table td.date {
-  text-align: right;
-  padding-right: 20px;
+td.date {
+  text-align: left;
+  padding-right: 10px;
   font-weight: bold;
   font-variant: small-caps;
-  vertical-align: top;
-  width: 100px;
 }
 
-table td.info {
+.skills td.date {
+  text-align: right;
+}
+
+td.info {
   text-align: left;
 }
 
 table.experience {
   border-collapse: separate;
-  border-spacing: 15px;
 }
 
 .experience td.date {
-  border-right: solid #7c7c7c;
-  /* border-right: solid white; */
-}
-
-table.education {
-  border-spacing: 5px;
-}
-
-.education td.info {
-  padding: 0 20px;
-}
-
-table.skills {
-  border-spacing: 0px;
-}
-
-.skills td.date {
-  width: 200px;
-}
-
-table.langs {
-  border-spacing: 15px;
-}
-
-.steps {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 120px;
-}
-
-.step {
-  width: 20px;
-  height: 20px;
-  /* background: #fff; */
-  border: 2px solid #acaca6;
-  border-radius: 50%;
-}
-
-.step.completed {
-  background: var(--primary);
-  border: 2px solid var(--primary);
-}
-
-.progress {
-  position: absolute;
-  height: 50%;
-  border-bottom: 2px solid #acaca6;
-  z-index: -1;
-}
-
-.percent {
-  position: absolute;
+  border-right: 1px solid #7c7c7c;
+  vertical-align: top;
   width: 100px;
-  height: 12px;
-  border-bottom: 2px solid var(--primary);
-  z-index: 1;
 }
 
 .references {
@@ -192,8 +141,13 @@ table.langs {
   flex: 1;
 }
 
-.projects span {
+.projects > div {
+  margin-left: 15px;
+}
+
+.projects span.name {
   font-weight: bold;
+  font-variant: small-caps;
 }
 
 .projects a {
@@ -264,8 +218,107 @@ input:checked + .slider:before {
   transform: translateX(16px);
 }
 
-// @media print {
-//   .noprint {
-//     display: none;
-//   }
-// }
+.pills {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 10pt;
+  width: min-content;
+  padding: 2px;
+  margin: 2px;
+  color: var(--font);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.twocolumns {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column:nth-child(1) {
+  flex: 1;
+  //   max-width: 25rem;
+  // flex-grow: 4;
+  //   overflow: visible;
+}
+.column:nth-child(2) {
+  // height: 50px;
+  flex: 1;
+  margin-left: 5%;
+}
+
+@media print {
+  @page {
+    size: A4; /* Change from the default size of A4 */
+    margin: 30px 50px; /* Set margin on each page */
+  }
+
+  * {
+    font-family: Avenir, Verdana, sans-serif;
+    font-style: normal;
+    color: var(--light-font);
+    background-color: white;
+    // font-size: 100% !important;
+  }
+
+  html {
+    display: block;
+    background-color: white;
+  }
+
+  body {
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  h1,
+  h2,
+  h2 > i {
+    color: var(--light-primary);
+  }
+
+  h1 {
+    font-size: 20pt;
+  }
+
+  h1 > strong,
+  h2#title {
+    font-weight: bold;
+    color: var(--light-primary);
+  }
+
+  td.date {
+    font-size: 10pt;
+  }
+
+  .projects a,
+  .projects a > i {
+    color: var(--light-primary);
+  }
+
+  .column:nth-child(1) {
+    flex: 0.73;
+    overflow: visible;
+  }
+  .column:nth-child(2) {
+    flex: 0.7;
+  }
+
+  div.links > div {
+    max-width: 85%;
+  }
+
+  .pills {
+    color: var(--light-font);
+  }
+
+  .noprint {
+    display: none !important;
+    opacity: 0;
+  }
+
+  .newpage {
+    page-break-before: always;
+  }
+}
