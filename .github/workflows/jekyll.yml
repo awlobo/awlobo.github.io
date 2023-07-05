@@ -20,7 +20,7 @@ jobs:
           pwd
           ls
           echo "Installing weasyprint"
-          apt install weasyprint
+          sudo apt install weasyprint
           echo "Exporting pdf"
           weasyprint -e "utf-8" -s assets/styles/cv.css https://awlobo.github.io/about/ assets/cv.pdf
       - run: echo "Done!"
