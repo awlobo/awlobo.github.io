@@ -1,13 +1,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="99VGYJMZa_at0ZKysgVr85dKN4I2j9uH1KGu04B93pI" />
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="stylesheet" type="text/css" href="/assets/styles/{{ page.style }}.css" rel="stylesheet" media="screen">
-    <link href="/assets/fontawesome-free-6.2.1/css/fontawesome.css" rel="stylesheet">
-    <link href="/assets/fontawesome-free-6.2.1/css/brands.css" rel="stylesheet">
-    <link href="/assets/fontawesome-free-6.2.1/css/solid.css" rel="stylesheet">
+    <link href="../assets/fontawesome-free-6.2.1/css/all.css" rel="stylesheet">
     <meta name="description"
         content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 </head>

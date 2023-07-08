@@ -19,9 +19,9 @@ experience:
       company: Cervezas La Cibeles
       location: Leganés, Madrid
       date: Apr 2020<br>Jun 2020
-      description:
-        [
-          Internship Contract. Development of a native Android application that reads barcodes,
+      description: [
+          "Internship Contract. Development of a barcode scanning app that captures,
+          decodes and displays relevant information from images of beer barcodes",
         ]
       tags: [Android, Kotlin, Firebase AA Kit, Git, GitHub Actions]
       visible: true
@@ -75,7 +75,7 @@ projects:
       date: 2020
       link: https://the-crimson-pizza.github.io/Tv-Tracker-Kotlin/
       github: https://github.com/The-Crimson-Pizza/Tv-Tracker-Kotlin
-      description: Is a free app for television fans. It allows you to keep track of the watched episodes and synchronize that information in real time in the cloud.
+      description: Free app for TV fans. It allows you to keep track of the episodes you have watched and synchronize them in real time in the cloud.
       tags:
         [
           Android,
