@@ -16,11 +16,12 @@
 
 @font-face {
   font-family: "SourceSans3";
-  src: url(/assets/fonts/SourceSans3-VariableFont_wght.ttf) format("truetype");
+  src: url("../../assets/fonts/SourceSans3-VariableFont_wght.ttf")
+    format("truetype");
 }
 
 * {
-  font-family: "SourceSans3", Avenir, Verdana, sans-serif;
+  font-family: SourceSans3, Avenir, Verdana, sans-serif;
   font-weight: 300;
   color: var(--font);
   background-color: var(--background);
