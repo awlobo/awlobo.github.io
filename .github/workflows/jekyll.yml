@@ -21,21 +21,21 @@ jobs:
           echo "---> Installing weasyprint"
           sudo apt install weasyprint
           echo "---> Exporting pdf"
-          weasyprint -e "utf-8" -s _site/assets/styles/cv.css _site/about/index.html assets/cv.pdf
+          weasyprint -e "utf-8" -s _site/assets/styles/cv.css _site/about/index.html _site/assets/cv.pdf
           echo "---> Copying pdf"
-      - name: Pushing pdf to remote
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add assets/cv.pdf
-          git commit -m "PDF auto generated"
-          git push
+      # - name: Pushing pdf to remote
+      #   run: |
+      #     git config user.name github-actions
+      #     git config user.email github-actions@github.com
+      #     git add assets/cv.pdf
+      #     git commit -m "PDF auto generated"
+      #     git push
       # - run: |
       #     docker run \
       #     -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
       #     jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-      - name: Build
-        uses: actions/jekyll-build-pages@v1
+      # - name: Build
+      #   uses: actions/jekyll-build-pages@v1
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
       - run: echo "Done!"
