@@ -21,7 +21,7 @@ jobs:
           echo "---> Installing weasyprint"
           sudo apt install weasyprint
           echo "---> Exporting pdf"
-          weasyprint -e "utf-8" -s _site/assets/styles/cv.css _site/about/index.html _site/assets/cv.pdf
+          sudo weasyprint -e "utf-8" -s _site/assets/styles/cv.css _site/about/index.html _site/assets/cv.pdf
           echo "---> Copying pdf"
       # - name: Pushing pdf to remote
       #   run: |
