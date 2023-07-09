@@ -59,6 +59,12 @@ sass:
 
 include: [_pages]
 
+plugins:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
+
 defaults:
   - scope:
       type: pages
