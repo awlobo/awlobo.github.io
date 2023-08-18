@@ -139,13 +139,30 @@ td.info {
   width: 70px;
 }
 
-div.experience td.company {
-  font-weight: 400;
+td.company:not(span) {
+  font-size: 0.9em;
 }
 
 span.company {
+  font-size: 1.3em;
   font-weight: 400;
   font-variant: small-caps;
+  margin-right: 5px;
+}
+
+span.position {
+  font-size: 1.2em;
+  font-weight: 400;
+  font-variant: small-caps;
+  margin-right: 5px;
+}
+
+td.position:not(span) {
+  font-size: 0.9em;
+}
+
+td.position {
+  padding-top: 0.5em;
 }
 
 .references {

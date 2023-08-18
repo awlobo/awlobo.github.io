@@ -70,25 +70,35 @@
             {% if exp.visible %}
             <table class="experience">
                 <tr>
-                    <td class="date" rowspan="5">{{exp.date}}</td>
+                    <td class="date" rowspan=20>{{exp.start_date}}<br>{{exp.end_date}}</td>
                 </tr>
                 <tr>
                     <td class="info company">
-                        {{exp.position}}, <span class="company">{{exp.company}}</span>, {{exp.location}}.
+                        <span class="company">{{exp.company}}</span> {{exp.location}}
                     </td>
                 </tr>
-                {% for desc in exp.description %}
+                {% for role in exp.roles %}
+                <tr>
+                    <td class="info position">
+                        <span class="position">{{role.position}}</span>
+                        {% if role.start_date %}
+                        {{role.start_date}} -{{role.end_date}}
+                        {% endif %}
+                    </td>
+                </tr>
+                {% for desc in role.description %}
                 <tr>
                     <td class="info"> ► {{ desc }}</td>
                 </tr>
                 {% endfor %}
                 <tr>
                     <td class="info">
-                        {% for tag in exp.tags %}
+                        {% for tag in role.tags %}
                         <span class="pill">{{ tag }}</span>
                         {% endfor %}
                     </td>
                 </tr>
+                {% endfor %}
             </table>
             {% endif %}
             {% endfor %}
