@@ -27,47 +27,48 @@
         <div id="spacer" style="height: 25px;"></div>
 
         <div class="links">
-            <table>
-                <tr>
-                    <td>
-                        <a target="_blank" href={{ me.url }}><i class="fa-fw fa-solid fa-terminal"></i>{{ me.url |
-                            replace:
-                            "https://", "" }}</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href={{ me.github }}><i class="fa-fw fa-brands fa-github"></i>{{ me.github |
-                            replace:
-                            "https://", "" }}</a>
-                    </td>
-                    <td>
-                        <a target="_blank" href={{ me.linkedin }}><i class="fa-fw fa-brands fa-linkedin"></i>{{
-                            me.linkedin |
-                            replace:"https://", "" }}</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span><i class="fa-solid fa-map-location-dot fa-fw"></i>{{ me.location }}</span>
-                    </td>
-                    <td>
-                        <span><i class="fa-solid fa-square-phone fa-fw"></i>{{ me.phone }}</span>
-                    </td>
-                    <td>
-                        <a target="_blank" href="mailito:{{ me.email }}">
-                            <i class="fa-fw fa-solid fa-at"></i>{{ me.email }}
-                        </a>
-                    </td>
-                </tr>
-            </table>
+            <div class="link">
+                <a target="_blank" href={{ me.url }}><i class="fa-fw fa-solid fa-terminal"></i>{{ me.url |
+                    replace:
+                    "https://", "" }}</a>
+            </div>
+
+            <div class="link">
+                <a target="_blank" href={{ me.github }}><i class="fa-fw fa-brands fa-github"></i>{{ me.github |
+                    replace:
+                    "https://", "" }}</a>
+            </div>
+
+            <div class="link">
+                <a target="_blank" href={{ me.linkedin }}><i class="fa-fw fa-brands fa-linkedin"></i>{{
+                    me.linkedin |
+                    replace:"https://", "" }}</a>
+            </div>
+
+            <div class="link">
+                <span><i class="fa-solid fa-map-location-dot fa-fw"></i>{{ me.location }}</span>
+
+            </div>
+
+            <div class="link">
+                <span><i class="fa-solid fa-square-phone fa-fw"></i>{{ me.phone }}</span>
+
+            </div>
+            <div class="link">
+                <a target="_blank" href="mailito:{{ me.email }}">
+                    <i class="fa-fw fa-solid fa-at"></i>{{ me.email }}
+                </a>
+            </div>
+
         </div>
 
         <div class="experience">
             <h2><i class="fa-solid fa-suitcase fa-fw"></i>{{cv.experience.name}}</h2>
             <hr>
 
+            {% for exp in cv.experience.data %}
+            {% if exp.visible %}
             <table class="experience">
-                {% for exp in cv.experience.data %}
-                {% if exp.visible %}
                 <tr>
                     <td class="date" rowspan="5">{{exp.date}}</td>
                 </tr>
@@ -84,13 +85,13 @@
                 <tr>
                     <td class="info">
                         {% for tag in exp.tags %}
-                        <span class="pills">{{ tag }}</span>
+                        <span class="pill">{{ tag }}</span>
                         {% endfor %}
                     </td>
                 </tr>
-                {% endif %}
-                {% endfor %}
             </table>
+            {% endif %}
+            {% endfor %}
         </div>
 
         <div class="twocolumns">
@@ -171,7 +172,7 @@
             <div>{{ pro.description }}</div>
             <div>
                 {% for tag in pro.tags %}
-                <span class="pills">{{ tag }}</span>
+                <span class="pill">{{ tag }}</span>
                 {% endfor %}
             </div>
             {% endfor %}

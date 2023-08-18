@@ -44,11 +44,6 @@ div#cv > div:not(#spacer):not(#title) {
   margin-bottom: 50px;
 }
 
-div.links > table {
-  border-spacing: 15px 5px;
-  margin-left: -18px;
-}
-
 span {
   font-weight: 100;
 }
@@ -99,6 +94,14 @@ h1 > a {
 
 .links {
   margin-top: 10px;
+  width: 60%;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+}
+
+div.links > div.link {
+  width: 17em;
 }
 
 h2 {
@@ -115,6 +118,7 @@ h2#title {
 
 table {
   border-spacing: 15px 0px;
+  margin-bottom: 1em;
 }
 
 .projects span.name,
@@ -166,7 +170,7 @@ span.company {
   color: var(--primary);
 }
 
-.pills {
+.pill {
   border: 1px solid lightgray;
   border-radius: 5px;
   font-size: 9pt;
@@ -185,6 +189,7 @@ span.company {
 .column:nth-child(1) {
   flex: 1;
 }
+
 .column:nth-child(2) {
   flex: 1;
   margin-left: 5%;
@@ -201,6 +206,25 @@ span.company {
 
 #footer > span {
   color: #7c7c7c;
+}
+
+@media (max-width: 1200px) {
+  .links {
+    width: 70%;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+@media (max-width: 705px) {
+  .twocolumns {
+    flex-direction: column;
+  }
+  .column:nth-child(2) {
+    margin-left: 0px;
+  }
+  .links {
+    grid-template-rows: repeat(8, auto);
+  }
 }
 
 @media print {
@@ -270,7 +294,7 @@ span.company {
     flex: 0.7;
   }
 
-  .pills {
+  .pill {
     color: var(--light-font);
   }
 

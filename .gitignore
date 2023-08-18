@@ -3,3 +3,10 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+gems/
+specifications/
+extensions/
+cache/
+build_info/
+bin/
+.bundle/

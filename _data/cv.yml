@@ -54,7 +54,7 @@ languages:
     - name: Spanish
       level: Native
     - name: English
-      level: Professional competence
+      level: C1
 skills:
   name: SKILLS
   data:

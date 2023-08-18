@@ -18,12 +18,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+title: awlobo
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
+rss: RSS
+### Build settings
+url: https://michaelcurrin.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 repository: awlobo/awlobo.github.io
+
+permalink: pretty
 
 google-analytics:
   id: "googlee651aad425394060"
@@ -41,17 +47,14 @@ kramdown:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - docs/
+  - vendor/
+  - Gemfile # Gemfile.lock is implied because of how matching works.
+  - LICENSE
+  - Makefile
+  - README.md
+  - sample*.png
 
 sass:
   load_paths:
@@ -72,3 +75,8 @@ defaults:
     values:
       is_post: false
       layout: default
+
+liquid:
+  error_mode: strict
+
+strict_front_matter: true
