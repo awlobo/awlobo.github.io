@@ -6,6 +6,7 @@ experience:
       start_date: Oct 2020
       end_date: Current
       location: Madrid, Spain
+      description: "Swiss software company that specializes in photogrammetry. It develops a suite of software products that use photogrammetry and computer vision algorithms to transform images into 3D maps and 3D modeling"
       visible: true
       roles:
         - position: Software Engineer
@@ -22,9 +23,6 @@ experience:
           start_date: Oct 2020
           end_date: Jul 2023
           description: [
-              "Drone photogrammetry software company,
-              uses images to create professional orthomosaics,
-              pointclouds, models and more",
               "Development of PIX4Dcapture Pro, a mobile application (iOS and Android) for data acquisition with drones and mission planning for 3D mapping",
             ]
           tags: [Qt, C++, Squish, Agile, Python, CI/CD, Git, Mixpanel]
