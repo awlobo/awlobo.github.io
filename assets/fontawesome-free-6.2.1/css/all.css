@@ -1478,7 +1478,7 @@ readers do not read off random characters that represent icons */
 .fa-hryvnia::before {
   content: "\f6f2"; }
 
-.fa-pills::before {
+.fa-pill::before {
   content: "\f484"; }
 
 .fa-face-grin-wide::before {

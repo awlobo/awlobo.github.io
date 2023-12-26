@@ -9,21 +9,31 @@ experience:
       description: "Swiss software company that specializes in photogrammetry. It develops a suite of software products that use photogrammetry and computer vision algorithms to transform images into 3D maps and 3D modeling"
       visible: true
       roles:
-        - position: Software Engineer
-          url: https://www.pix4d.com/product/pix4dcatch
-          start_date: Jul 2023
+        - position: Frontend Software Engineer
+          url: https://www.pix4d.com/product/pix4dcloud
+          start_date: Nov 2023
           end_date: Current
           description:
             [
-              "Development of PIX4Dcatch, a mobile application designed for iOS and Android devices which enables you to take images of a scene, ready to be converted into a 3D model geolocated and in real time",
+              "Development of PIX4Dcloud, a cloud-based photogrammetry software that enables users to create professional orthomosaics, point clouds, models, and more from drone imagery.",
             ]
-          tags: [Android, Kotlin, Fastlane, CI/CD]
-        - position: Software Engineer
+          tags: [Angular, Jest, TypeScript, Figma]
+        - position: Mobile Software Engineer
+          url: https://www.pix4d.com/product/pix4dcatch
+          start_date: Jul 2023
+          end_date: Nov 2023
+          description:
+            [
+              "Development of PIX4Dcatch, mobile application that transforms your device into a professional handheld 3D scanner, enabling you to capture and process 3D data from your surroundings.",
+            ]
+          tags: [Android, Kotlin, Fastlane, CI/CD, Conan, CMake]
+        - position: Mobile Software Engineer
           url: https://www.pix4d.com/product/pix4dcapture
           start_date: Oct 2020
           end_date: Jul 2023
-          description: [
-              "Development of PIX4Dcapture Pro, a mobile application (iOS and Android) for data acquisition with drones and mission planning for 3D mapping",
+          description:
+            [
+              "Development of PIX4Dcapture Pro and PIX4Dscan, mobile applications (iOS and Android) for data acquisition with drones and mission planning for 3D mapping",
             ]
           tags: [Qt, C++, Squish, Agile, Python, CI/CD, Git, Mixpanel]
 
@@ -77,17 +87,17 @@ skills:
   name: SKILLS
   data:
     - name: Languages
-      items: [JavaScript, Python, C++]
-    - name: Mobile
-      items: [Android, React Native]
-    - name: Cross-platform
-      items: [Flutter, Qt]
+      items: [JavaScript/TypeScript, Python, C++]
     - name: Web
-      items: [React, HTML, CSS, Node.js]
+      items: [Angular, React, HTML, CSS, Node.js]
+    - name: Cross-platform
+      items: [React Native, Flutter, Qt]
+    - name: Mobile
+      items: [Android]
+    - name: Tools
+      items: [Firebase, Postman, Git, Fastlane, Jest]
     - name: Databases
       items: [SQLite, MySQL, MongoDB]
-    - name: Tools
-      items: [Firebase, Postman, Git]
 projects:
   name: PROJECTS
   data:
