@@ -1,23 +1,27 @@
 <div id="particles-js">
-    <div class="header">
+  <div class="header">
+    {% assign p = site.data.personal %}
 
-        {% assign p = site.data.personal %}
-
-        <h1>
-            <span class="site-title">{{p.full_name}}</span>
-            <span class="site-description">{{p.user_title}}</span>
-        </h1>
-        <div class="header-icons">
-            <a aria-label="Send email" target="_blank" href="mailto:{{p.email}}"><i class="icon fa fa-envelope"></i></a>
-            <a aria-label="My Github" target="_blank" href={{p.github}}><i class="icon fa-brands fa-github"
-                    aria-hidden="true"></i></a>
-            <a aria-label="My linkedIn" target="_blank" href={{p.linkedin}}><i
-                    class="icon fa fa-brands fa-linkedin-in"></i></a>
-        </div>
-        <div class="header-links">
-            {% for nav in site.data.nav %}
-            <a class="link" href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
-            {% endfor %}
-        </div>
+    <h1>
+      <span class="site-subtitle">Hello! I am</span>
+      <span class="site-title">{{p.full_name}}</span>
+      <span class="site-description">{{p.user_title}}</span>
+    </h1>
+    <div class="header-icons">
+      <a aria-label="Send email" target="_blank" href="mailto:{{p.email}}"
+        ><i class="icon fa fa-envelope"></i
+      ></a>
+      <a aria-label="My Github" target="_blank" href="{{p.github}}"
+        ><i class="icon fa-brands fa-github" aria-hidden="true"></i
+      ></a>
+      <a aria-label="My linkedIn" target="_blank" href="{{p.linkedin}}"
+        ><i class="icon fa fa-brands fa-linkedin-in"></i
+      ></a>
     </div>
+    <div class="header-links">
+      {% for nav in site.data.nav %}
+      <a class="link" href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+      {% endfor %}
+    </div>
+  </div>
 </div>
