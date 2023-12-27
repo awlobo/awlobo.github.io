@@ -131,18 +131,38 @@ body {
   }
 
   .site-subtitle {
-    color: #fff;
-    font-size: 15px;
     display: block;
+    color: #fff;
+    font-family: monospace;
+    font-size: 15px;
+    white-space: nowrap;
     text-align: center;
+    border-right: 4px solid;
+    width: 14ch;
+
+    animation: typing 2s steps(13), blink 0.5s infinite step-end alternate;
+    overflow: hidden;
   }
 
   .site-description {
+    // font-family: monospace;
     font-size: 20px;
     display: block;
     line-height: 1;
     color: #fff;
     margin-top: 6%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
 
@@ -157,28 +177,27 @@ body {
       //   text-align: start;
       font-size: 20px;
     }
-  }
-}
 
-@media only screen and (min-width: 550px) {
-  .header .site-description {
-    font-size: 40px;
+    .site-description {
+      font-size: 35px;
+    }
   }
 }
 
 .header-links {
-  margin: 10px;
+  font-family: monospace;
+  margin: 15px;
   height: 30px;
-}
 
-.header-links .link {
-  font-size: 20px;
-  color: #fff;
-  text-decoration: none;
-}
+  .link {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
 
-.header-links .link:hover {
-  font-size: 21px;
+    &:hover {
+      font-size: 21px;
+    }
+  }
 }
 
 .header-icons {
